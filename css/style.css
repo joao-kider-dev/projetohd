@@ -1,22 +1,80 @@
-*{
-    margin: 0;
+/*fontes*/
+@font-face{
+    font-family:accelaration_reaction; 
+    src: url(/Projeto-HD/images/fontes/acceleration_reaction/Acceleration\ &\ Reaction.ttf);
+     font-family:lemon_milk;
+     src: url(/Projeto-HD/images/fontes/lemon_milk/LEMONMILK-RegularItalic.otf);
 }
 
+/*reset*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+/*variaveis*/
 :root {
-    --height-full: 100vh
+    --height-full: 100vh;
+    --color-light: #fff;
+    --color-dark: #000;
+    --color-orange: #ff6600;
+    --spacing-sm: 10px;
+    --spacing-md:20px;
+    --spacing-lg: 30px;
 }
 
 html{
     scroll-behavior: smooth;
+    font-family:accelaration_reaction;
 }
+
+ul, ol {
+    list-style: none;
+}
+
+/*links*/
+a{
+    color: var(--color-light);
+    text-decoration: none;
+    font-weight: 700;
+}
+
 .hero {
-    background-image: url(../Projeto-HD/images/motos/banner.jpg);
+   color:var(--color-light);
+    background-image: linear-gradient(to top, rgba(0,0,0, .8),rgba(0,0,0, .4)), 
+    url(../Projeto-HD/images/motos/banner.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     height: var(--height-full);
 }
+.header-hero{
+    height: 100px;
+    padding-inline: var(--spacing-lg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.menu-hero-list {
+    display: flex;
+    gap: var(--spacing-lg);
+}
+
+.cta {
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-md);
+}
 .box {
     height: var(--height-full);
 
+}
+a:hover {
+color: var(--color-orange);
 }
